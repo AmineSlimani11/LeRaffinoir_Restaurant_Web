@@ -7,7 +7,7 @@
 /*###############################################################################################################################################################*/
 
 body {
-      font-family: Arial, sans-serif;
+      font-family: 'Times New Roman', Times, serif;
     background-color: #ffffff; /* Couleur de fond de la page */
     background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
     background-position: center center; /* Centre l'image horizontalement et verticalement */
@@ -16,65 +16,58 @@ body {
 
 /*###############################################################################################################################################################*/
 
-.header-nav-container {
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding: 20px 10px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(24, 23, 23);
-    color: rgb(24, 23, 23);
-    padding: 15px;
+    transition: 0.5s;
+    background-color: #242323;
 }
 
-
-header {
-    background-color: rgb(24, 23, 23); /* Couleur de fond de l'en-tête */
-    color: rgb(255, 255, 255); /* Couleur du texte dans l'en-tête */
-    text-align: center;
-    font-family: 'Times New Roman' ;
-    line-height: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-/*###############################################################################################################################################################*/
-
-nav {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-}
-
-nav ul {
-    list-style: none;
-    background-color: rgb(24, 23, 23); /* Couleur de fond du menu de navigation */
-    text-align: center;
-    display: flex;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
     text-decoration: none;
-    color: rgb(255, 255, 255); /* Couleur du texte des liens dans le menu de navigation */
+}
+.navbar{
+    display: flex;
+    position: relative;
+}
+.navbar li{
+    list-style: none;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: 900;
+    
+}
+header .navbar li a:hover{
+    color: #a9621f;
+    border-bottom: 2px solid #a9621f;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* Effet de soulignement au survol des liens */
+ /*###############################################################################################################################################################*/
+
+ .bouton-pour-inscripconnex{
+    padding: 10px 20px;
+    background: #a9621f;
+    margin-top: -10px;
+   text-transform:uppercase ;
+   color: #fff;
+}
+.bouton-pour-inscripconnex:hover{
+    background: #242323;
+    transition: ease-out;
 }
 
-/*###############################################################################################################################################################*/
-
-nav li details summary {
-    color: #ffffff; /* Changez la couleur selon vos préférences (#ff0000 est le rouge) */
-}
-nav li details ul li {
-    color: #ffffff; /* Changez la couleur selon vos préférences (#ff0000 est le rouge) */
-    text-align: center;
-    display: block;
-}
 
 /*###############################################################################################################################################################*/
 
