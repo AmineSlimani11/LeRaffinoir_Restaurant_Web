@@ -1,0 +1,145 @@
+    /* Réinitialisation des marges et des rembourrages par défaut */
+    body, h1, h2, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*###############################################################################################################################################################*/
+
+    body {
+        background-image: url('Images/page1_.jpg.webp'); /* Remplacez 'votre-image.jpg' par le chemin de votre image d'arrière-plan */
+        font-family: Arial, sans-serif;
+        background-color: #000000; /* Couleur de fond de la page */
+        background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
+        background-position: center center; /* Centre l'image horizontalement et verticalement */
+        background-attachment: fixed;
+    }
+
+    /*###############################################################################################################################################################*/
+
+    .header-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(24, 23, 23);
+        color: rgb(24, 23, 23);
+        padding: 30px;
+    }
+
+
+    header {
+        background-color: rgb(24, 23, 23); /* Couleur de fond de l'en-tête */
+        color: rgb(255, 255, 255); /* Couleur du texte dans l'en-tête */
+        text-align: center;
+        font-family: 'Times New Roman';
+        line-height: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*###############################################################################################################################################################*/
+
+    nav {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    nav ul {
+        list-style: none;
+        background-color: rgb(24, 23, 23); /* Couleur de fond du menu de navigation */
+        text-align: center;
+        display: flex;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255); /* Couleur du texte des liens dans le menu de navigation */
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline; /* Effet de soulignement au survol des liens */
+    }
+
+    /*###############################################################################################################################################################*/
+
+    nav li details summary {
+        color: #ffffff; /* Changez la couleur selon vos préférences (#ff0000 est le rouge) */
+    }
+    nav li details ul li {
+        color: #ffffff; /* Changez la couleur selon vos préférences (#ff0000 est le rouge) */
+        text-align: center;
+        display: block;
+    }
+
+    /*###############################################################################################################################################################*/
+
+    #présentation {
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255); /* Couleur du texte dans la section du héros */
+        text-align: center;
+        padding: 150px 120px;
+    }
+    #présentation h1 {
+        font-family: cursive;
+        font-size: 50px;
+    }
+
+    /*###############################################################################################################################################################*/
+
+    footer {
+        background-color: rgb(24, 23, 23); /* Couleur de fond du footer */
+        color: rgb(255, 255, 255); /* Couleur du texte dans le footer */
+        text-align: center;
+        padding: 10px ;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        
+    }
+    h3{
+        font-size: 13px;
+    }
+    
+
+    .social-media a {
+        
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .social-media img {
+        width: 25px; /* Ajustez la taille de l'icône de média social au besoin */
+        height: 25px;
+        
+    }
+
+    .social-media {
+        margin: 0 100px;
+    }
+
+    .contact-info p {
+        margin: 5px 0;
+    }
+
+    .contact-info  {
+        text-align: center;
+    }
+    .adresse {
+        margin: 0 100px;
+    }
+    .adresse a{
+        
+        color: rgb(255, 255, 255);
+    }
+    /*###############################################################################################################################################################*/

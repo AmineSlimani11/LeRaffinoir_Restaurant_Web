@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="styles_Réservation.css">
+        <title>Réservation</title>
+    </head>
+
+    <body>
+
+        <div class="header-nav-container">
+            <header>
+                <h1>Art Restaurant</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="page_Accueil.html">Accueil</a></li>
+                    <li><a href="page1.html">À propos</a></li>
+                    <li><a href="page2.html">Services</a></li>
+                    <li><a href="page_Réservation.html">Réservation</a></li>
+                    <li><a href="page4.html">La carte</a></li>
+                    <li><a href="page5.html">Galerie photo</a></li>
+                    <li><a href="page6.html">Notre équipe</a></li>
+                    <li>
+                        <details>
+                            <summary>Plus</summary>
+                            <ul>
+                                <li><a href="page7.html">Contact</a></li>
+                                <li><a href="page8.html">Avis</a></li>                    
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </nav>
+        
+        </div>
+
+        <div class="body">
+
+            <aside>
+                <h1>Réservation</h1>
+                <p>ART Restaurant propose un service de reservation en ligne facile et
+                    pratique bour les clients souhaitant réserver une table bour une expérience
+                    gastronomique unique. Les clients beuvent réserver leur table en auelques
+                    ClICS seulement, en utIlisant notre systeme de reservation en ligne sur notre
+                    site internet. Pour commencer. les clients beuvent choisir la date et l'heure
+                    de leur reservation en utilisant le calendrier disponible sur notre site.</p>
+            </aside>
+
+            <main>
+                <form action="BD_Reservation.php" method="post">
+                    <label for="nom">Nom :</label>
+                    <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
+        
+                    <label for="email">E-mail :</label>
+                    <input type="email" placeholder="Votre mail" id="email" name="email" required>
+        
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" placeholder="Votre numéro" id="telephone" name="telephone" required>
+        
+                    <label for="date">Date de réservation :</label>
+                    <input type="date" id="date" name="date" required>
+        
+                    <label for="heure">Heure de réservation :</label>
+                    <input type="time" id="heure" name="heure" required>
+        
+                    <label for="personnes">Nombre de personnes :</label>
+                    <input type="number" placeholder="0" id="personnes" name="personnes" required>
+        
+                    <label for="commentaires">Commentaires :</label>
+                    <textarea placeholder="maximum 255 caractére ..." id="commentaires" name="commentaires" rows="4"></textarea>
+        
+                    <input type="submit" value="Réserver">
+                </form>
+            </main>
+            
+        </div>
+
+        <footer>
+            <div class="social-media">
+                <h3>Social Media</h3>
+                <a href="https://www.facebook.com/votrerestaurant" target="_blank"><img src="Images/logo-facebook.avif" alt="Facebook"></a>
+                <a href="https://www.instagram.com/votrerestaurant" target="_blank"><img src="Images/logo-insta.avif" alt="Instagram"></a>
+                <a href="https://www.Pinterest.com/votrerestaurant" target="_blank"><img src="Images/logo-pinterest.avif" alt="Pinterest"></a>
+                <p>&copy; 2023 Art Restaurant. Tous droits réservés.</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contactez-nous</h3>
+                <p>contact@votrerestaurant.com</p>
+                <p>Téléphone : +01 234 567 890</p>
+            </div>
+            <div class="adresse">
+                <h3>Adresse</h3>
+                <p><a href="https://maps.app.goo.gl/b6JZEzvPRLHpEnCZ7">3 Bd de la Résistance, 62100 Calais</a></p>
+            </div>
+        </footer>
+
+    </body>
+</html>
