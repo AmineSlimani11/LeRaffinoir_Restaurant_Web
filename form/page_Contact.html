@@ -3,10 +3,9 @@
 
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="styles_Réservation.css">
-        <title>Réservation</title>
+        <link rel="stylesheet" type="text/css" href="styles_Contact.css">
+        <title>Contact</title>
     </head>
-
     <body>
 
         <header>
@@ -23,46 +22,34 @@
             </ul>
         </header>
 
-        <div class="body">
-
+        <main>
             <aside>
-                <h1>Réservation</h1>
+                
                 <p>ART Restaurant propose un service de reservation en ligne facile et
                     pratique bour les clients souhaitant réserver une table bour une expérience
                     gastronomique unique. Les clients beuvent réserver leur table en auelques
                     ClICS seulement, en utIlisant notre systeme de reservation en ligne sur notre
                     site internet. Pour commencer. les clients beuvent choisir la date et l'heure
                     de leur reservation en utilisant le calendrier disponible sur notre site.</p>
+                <h3>contact@ArtRestaurant.com</h3>
             </aside>
 
-            <main>
-                <form action="BD_Reservation.php" method="post">
-                    <label for="nom">Nom :</label>
-                    <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
-        
-                    <label for="email">E-mail :</label>
-                    <input type="email" placeholder="Votre mail" id="email" name="email" required>
-        
-                    <label for="telephone">Téléphone :</label>
-                    <input type="tel" placeholder="Votre numéro" id="telephone" name="telephone" required>
-        
-                    <label for="date">Date de réservation :</label>
-                    <input type="date" id="date" name="date" required>
-        
-                    <label for="heure">Heure de réservation :</label>
-                    <input type="time" id="heure" name="heure" required>
-        
-                    <label for="personnes">Nombre de personnes :</label>
-                    <input type="number" placeholder="0" id="personnes" name="personnes" required>
-        
-                    <label for="commentaires">Commentaires :</label>
-                    <textarea placeholder="maximum 255 caractére ..." id="commentaires" name="commentaires" rows="4"></textarea>
-        
-                    <input type="submit" value="Réserver">
-                </form>
-            </main>
-            
-        </div>
+            <form action="BD_Contact.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
+    
+                <label for="email">E-mail :</label>
+                <input type="email" placeholder="Votre mail" id="email" name="email" required>
+    
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" placeholder="Votre numéro" id="telephone" name="telephone" required>
+    
+                <label for="message">Message :</label>
+                <textarea placeholder="Votre message ..." id="message" name="message" rows="4"></textarea>
+    
+                <input type="Submit" value="Envoyer le Message">
+            </form>
+        </main>
 
         <footer>
             <div class="social-media">
