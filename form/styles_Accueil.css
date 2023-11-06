@@ -60,7 +60,7 @@
 
     .bouton-pour-inscripconnex{
         padding: 10px 20px;
-        background: #a9621f;
+        background: #9b5310;
         margin-top: -10px;
        text-transform:uppercase ;
        color: #fff;
@@ -77,15 +77,11 @@
         background-position: center;
         color: rgb(255, 255, 255); /* Couleur du texte dans la section du héros */
         text-align: center;
-        padding: 150px 120px;
+        padding: 250px 250px;
         margin-top: 80px;
         background-image: url('Images/page1_.jpg.webp');
-
     }
-    #présentation h1 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 50px;
-    }
+ 
    
     
 
