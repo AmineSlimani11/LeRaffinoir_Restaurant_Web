@@ -95,42 +95,45 @@
     }
 
 /*###############################################################################################################*/
- /* À propos */
-#apropos {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Centrer verticalement le contenu */
-    min-height: 100vh;
-    margin: 10px 0; /* Marge en haut et en bas */
-    text-align: center; /* Centrer le contenu horizontalement */
-}
+                                /* À propos */
+    #apropos {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        align-items: center; /* Centrer verticalement le contenu */
+        min-height: 100vh;
+        margin: 50px 0; /* Marge en haut et en bas */
+        text-align: center; /* Centrer le contenu horizontalement */
+    }
 
-#apropos .left-image {
-    width: 600px;
-    height: 400px;
-    margin: 20px;
-}
+    #apropos .right-image img{
+        width: 500px;
+        height: 400px;
+        margin: 20px;
+    }
 
-#apropos .right-content {
-    max-width: 500px;
-}
+    #apropos .left-content {
+        max-width: 500px;
+        position: left;
+    }
 
-#apropos h2 {
-    font-size: 35px;
-    color: #a9621f;
-    margin: 5px 0 20px; /* Marge en haut, en bas, et réduite pour le décalage */
-    text-align: left; /* Aligner le titre à gauche */
-    padding-left: 50px; /* Ajouter un espacement à gauche */
-}
+    #apropos h2 {
+        font-size: 35px;
+        color: #a9621f;
+        margin: 5px 0 20px; /* Marge en haut, en bas, et réduite pour le décalage */
+        text-align: left; /* Aligner le titre à gauche */
+        padding-left: 50px; /* Ajouter un espacement à gauche */
+    }
 
-#apropos p {
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 20px 0; /* Marge en haut et en bas */
-    text-align: justify;
-    font-style: italic;
-}
- /*#######################################################################################################################*/
+    #apropos p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin: 20px 0; /* Marge en haut et en bas */
+        text-align: justify;
+        font-style: italic;
+    }
+
+/*#######################################################################################################################*/
                                 /*temoignage*/
     .temoignage{
         background-image: url(images/tble.jpg);
