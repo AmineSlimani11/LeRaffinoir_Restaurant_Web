@@ -25,14 +25,16 @@
         <div class="body">
 
             <aside>
-                <h1>Réservation</h1>
-                <p>Le RAFFINOIR propose un service de reservation en ligne facile et
-                    pratique bour les clients souhaitant réserver une table bour une expérience
-                    gastronomique unique. Les clients beuvent réserver leur table en auelques
-                    ClICS seulement, en utIlisant notre systeme de reservation en ligne sur notre
-                    site internet. Pour commencer. les clients beuvent choisir la date et l'heure
-                    de leur reservation en utilisant le calendrier disponible sur notre site.</p>
+                <h1><span>R</span>éservation</h1>
+                <p>Votre réservation dans notre restaurant est la première étape pour vivre une expérience gastronomique 
+                exceptionnelle. Notre équipe est prête à vous accueillir avec chaleur et à vous offrir un service de première 
+                classe. Pour réserver une table, veuillez utiliser notre système de réservation en ligne, qui vous permet de 
+                choisir votre date, votre heure et le nombre de convives. Si vous avez des demandes spéciales ou des besoins 
+                alimentaires particuliers, n'hésitez pas à les mentionner lors de la réservation. Nous faisons tout notre 
+                possible pour personnaliser votre expérience. Nous sommes impatients de vous accueillir et de vous faire 
+                découvrir l'harmonie parfaite entre saveurs exquises et ambiance raffinée.</p>
             </aside>
+
 
             <main>
                 <form method="post" action="BD_Reservation.php">
@@ -46,10 +48,10 @@
                     <input type="tel" placeholder="Votre numéro" id="telephone" name="telephone" required>
         
                     <label for="date">Date de réservation :</label>
-                    <input type="date" id="date" name="date" required>
+                    <input type="date" id="date" name="date" required min="<?php echo date('Y-m-d'); ?>">
         
                     <label for="heure">Heure de réservation :</label>
-                    <input type="time" id="heure" name="heure" required>
+                    <input type="time" id="heure" name="heure" required min="12:00" max="23:59">
         
                     <label for="personnes">Nombre de personnes :</label>
                     <input type="number" placeholder="0" id="personnes" name="personnes" required>

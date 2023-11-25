@@ -72,6 +72,14 @@ main {
     position: flex;
 }
 
+aside p{
+    text-align: justify;
+    font-size: 17px;
+}
+aside p span{
+    font-size: 20px;
+}
+
 main aside {
     margin-top: 15px;
     padding: 10px;
