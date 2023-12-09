@@ -3,10 +3,14 @@
 
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="styles_Contact.css">
-        <title>Contact</title>
+        <link rel="stylesheet" type="text/css" href="styles_Connexion.css">
+        <title>Connexion/Inscription</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     </head>
+
     <body>
+
 
         <header>
             <a href="page_Accueil.html" class="logo"> Le RAFFINOIR</a>
@@ -22,34 +26,20 @@
         </header>
 
         <main>
-            <aside>
-                
-                <p><span>N</span>ous sommes impatients de vous accueillir dans notre restaurant et de répondre 
-                    à toutes vos demandes. Si vous avez des questions ou des besoins particuliers, n'hésitez pas 
-                    à nous contacter. Notre équipe dévouée est à votre disposition pour vous assister. Vous pouvez 
-                    nous joindre par téléphone ou par e-mail, et nous serons heureux de discuter de la meilleure 
-                    façon de rendre votre expérience avec nous inoubliable. Votre satisfaction est notre priorité, 
-                    et nous sommes là pour répondre à tous vos besoins.</p>
-                <h3>contact@leraffinoir.fr</h3>
-
-            </aside>
-
-            <form method="post" action="BD_Contact.php">
-                <label for="nom">Nom :</label>
-                <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
-    
-                <label for="email">E-mail :</label>
-                <input type="email" placeholder="Votre mail" id="email" name="email" required>
-    
-                <label for="telephone">Téléphone :</label>
-                <input type="tel" placeholder="Votre numéro" id="telephone" name="telephone" required>
-    
-                <label for="message">Message :</label>
-                <textarea placeholder="Votre message ..." id="message" name="message" rows="4"></textarea>
-    
-                <input type="Submit" value="Envoyer le Message">
-            </form>
+            <div class="container">
+                <h1>Connexion/Inscription</h1>
+                <p class="mt-2">Connectez-vous à votre espace personnel</p>
+                <form action="Connection.php" method="post" class="mt-4">
+                    <div class="input-box">
+                        <input type="email" class="form-control form-control-lg" name="_email" id="email" placeholder="Email" value="">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    
+                    <button type="submit" class="btn">Suivant</button>
+                </form>
+            </div>
         </main>
+        
 
         <footer>
             <div class="social-media">

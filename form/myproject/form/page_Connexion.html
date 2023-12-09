@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="styles_Connexion.css">
+        <title>Connection</title>
+    </head>
+
+
+    <body>
+
+    
+        <header>
+            <a href="page_Accueil.html" class="logo"> Le RAFFINOIR</a>
+            <div class="menuToggle"></div>
+            <ul class="navbar">
+                <li><a href="page_Accueil.html">Accueil</a></li>
+                <li><a href="page_Accueil.html#apropos">À propos</a></li>
+                <li><a href="page_Accueil.html#temoignage">Temoignage</a></li>
+                <li><a href="page_Menu.html">Menu</a></li>
+                <li><a href="page_Contact.html">Contact</a></li>
+                <a href="page_Connexion.html" class="bouton-pour-inscripconnex">S'inscrire/Connexion</a>
+            </ul>
+        </header>
+
+
+    <div class="container-fluid position-relative">
+        <div class="container">
+            <div class="col-md-5 col-form">
+                <h1>Connexion/Inscription</h1>
+                <p class="mt-2">Connectez-vous à votre espace personnel</p>
+                <form action="/rejoindre-archidvisor" method="post" class="mt-4">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control form-control-lg" name="_email" id="email" placeholder="Email" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control form-control-lg" name="_password" id="password" placeholder="Mot de passe">
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="remember_me" name="_remember_me" checked="">
+                        <label class="custom-control-label" for="remember_me">Rester connecté</label>
+                    </div>
+                    <input type="hidden" name="_target_path" value="">
+                    <div class="mt-4">
+                        <input class="btn btn-primary btn-lg" type="submit" value="Connexion">
+                    </div>
+                    <p class="mt-3">
+                        <a href="/mot-de-passe-oublie">Mot de passe oublié</a> / <a href="/qui-etes-vous">Inscription</a>
+                    </p>
+                </form>
+            </div>
+            <div class="cover" style="background-image: url('https://images.archidvisor.com/width/1000/n/_archi_/static/images/login.jpeg')">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <h3>Social Media</h3>
+            <a href="https://www.facebook.com/votrerestaurant" target="_blank"><img src="images/icone-facebook-ronde.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/votrerestaurant" target="_blank"><img src="images/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://www.Pinterest.com/votrerestaurant" target="_blank"><img src="images/pinteresttt.png" alt="Pinterest"></a>
+            <p>&copy; 2023 Le RAFFINOIR. Tous droits réservés.</p>
+        </div>
+        <div class="contact-info">
+            <h3>Contactez-nous</h3>
+            <p>contact@leraffinoir.com</p>
+            <p>Téléphone : +01 234 567 890</p>
+        </div>
+        <div class="adresse">
+            <h3>Adresse</h3>
+            <p><a href="https://maps.app.goo.gl/b6JZEzvPRLHpEnCZ7">3 Bd de la Résistance, 62100 Calais</a></p>
+        </div>
+    </footer>
+
+    </body>
+</html>
