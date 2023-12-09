@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="styles_Réservation.css">
+        <title>Réservation</title>
+    </head>
+
+    <body>
+
+        <header>
+            <a href="page_Accueil.html" class="logo"> Le RAFFINOIR</a>
+            <div class="menuToggle"></div>
+            <ul class="navbar">
+                <li><a href="page_Accueil.html">Accueil</a></li>
+                <li><a href="page_Accueil.html#apropos">À propos</a></li>
+                <li><a href="page_Accueil.html#temoignage">Temoignage</a></li>
+                <li><a href="page_Menu.html">Menu</a></li>
+                <li><a href="page_Contact.html">Contact</a></li>
+                <a href="page_Connexion.html" class="bouton-pour-inscripconnex">S'inscrire/Connexion</a>
+            </ul>
+        </header>
+
+        <div class="body">
+
+            <aside>
+                <h1><span>R</span>éservation</h1>
+                <p>Votre réservation dans notre restaurant est la première étape pour vivre une expérience gastronomique 
+                exceptionnelle. Notre équipe est prête à vous accueillir avec chaleur et à vous offrir un service de première 
+                classe. Pour réserver une table, veuillez utiliser notre système de réservation en ligne, qui vous permet de 
+                choisir votre date, votre heure et le nombre de convives. Si vous avez des demandes spéciales ou des besoins 
+                alimentaires particuliers, n'hésitez pas à les mentionner lors de la réservation. Nous faisons tout notre 
+                possible pour personnaliser votre expérience. Nous sommes impatients de vous accueillir et de vous faire 
+                découvrir l'harmonie parfaite entre saveurs exquises et ambiance raffinée.</p>
+            </aside>
+
+
+            <main>
+                <form method="post" action="BD_Reservation.php">
+                    <label for="nom">Nom :</label>
+                    <input type="text" placeholder="Votre nom" id="nom" name="nom" required>
+        
+                    <label for="email">E-mail :</label>
+                    <input type="email" placeholder="Votre mail" id="email" name="email" required>
+        
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" placeholder="Votre numéro" id="telephone" name="telephone" required>
+        
+                    <label for="date">Date de réservation :</label>
+                    <input type="date" id="date" name="date" required min="<?php echo date('Y-m-d'); ?>">
+        
+                    <label for="heure">Heure de réservation :</label>
+                    <input type="time" id="heure" name="heure" required min="12:00" max="23:59">
+        
+                    <label for="personnes">Nombre de personnes :</label>
+                    <input type="number" placeholder="0" id="personnes" name="personnes" required>
+        
+                    <label for="commentaires">Commentaires :</label>
+                    <textarea placeholder="maximum 2000 caractére ..." id="commentaires" name="commentaires" rows="4"></textarea>
+        
+                    <input type="submit" value="Réserver">
+                </form>
+            </main>
+            
+        </div>
+
+        <footer>
+            <div class="social-media">
+                <h3>Social Media</h3>
+                <a href="https://www.facebook.com/votrerestaurant" target="_blank"><img src="images/icone-facebook-ronde.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/votrerestaurant" target="_blank"><img src="images/Instagram_icon.png" alt="Instagram"></a>
+                <a href="https://www.Pinterest.com/votrerestaurant" target="_blank"><img src="images/pinteresttt.png" alt="Pinterest"></a>
+                <p>&copy; 2023 Le RAFFINOIR. Tous droits réservés.</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contactez-nous</h3>
+                <p>contact@leraffinoir.com</p>
+                <p>Téléphone : +01 234 567 890</p>
+            </div>
+            <div class="adresse">
+                <h3>Adresse</h3>
+                <p><a href="https://maps.app.goo.gl/b6JZEzvPRLHpEnCZ7">3 Bd de la Résistance, 62100 Calais</a></p>
+            </div>
+        </footer>
+
+    </body>
+</html>

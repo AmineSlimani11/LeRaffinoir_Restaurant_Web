@@ -1,17 +1,7 @@
-   /* Réinitialisation des marges et des rembourrages par défaut */
+
    body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
-}
-
-/*###############################################################################################################################################################*/
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #ffffff; /* Couleur de fond de la page */
-    background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
-    background-position: center center; /* Centre l'image horizontalement et verticalement */
-    background-attachment: fixed;
 }
 
 /*###############################################################################################################################################################*/
@@ -35,21 +25,23 @@ header{
     font-size: 40px;
     text-decoration: none;
 }
+
 .navbar{
     display: flex;
     position: relative;
 }
+
 .navbar li{
     list-style: none;
-    font-size: 17px;
 }
+
 .navbar a{
     color: #fff;
     text-decoration: none;
     margin-left: 35px;
-    font-weight: 900;
-    
+    font-weight: 900; 
 }
+
 header .navbar li a:hover{
     color: #a9621f;
     border-bottom: 2px solid #a9621f;
@@ -62,44 +54,10 @@ header .navbar li a:hover{
    text-transform:uppercase ;
    color: #fff;
 }
+
 .bouton-pour-inscripconnex:hover{
     background: #242323;
     transition: ease-out;
-}
-
-
-/*###############################################################################################################################################################*/
-
-.body {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-aside {
-    flex-basis: 45%; /* Définit la largeur de la barre latérale */
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin: 10% auto;
-}
-
-aside h1{
-    color: #a9621f;
-    font-family: 'cursive';
-    letter-spacing: 2px;
-    line-height: 30px;
-}
-
-aside h1 span{
-    font-size: 30px ;
-}
-
-aside p {
-    color: #333;
-    text-align: justify;
-    margin-top: 20px;
 }
 
 /*###############################################################################################################################################################*/
@@ -114,6 +72,24 @@ main {
     position: flex;
 }
 
+aside p{
+    text-align: justify;
+    font-size: 17px;
+}
+aside p span{
+    font-size: 20px;
+}
+
+main aside {
+    margin-top: 15px;
+    padding: 10px;
+}
+
+main aside h3 {
+    font-size: 18px;
+    align-items: center;
+    text-align: center;}
+
 form {
     text-align: left;
 }
@@ -126,9 +102,6 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="date"],
-input[type="time"],
-input[type="number"],
 textarea {
     width: 95%;
     padding: 10px;
@@ -145,15 +118,16 @@ input[type="submit"] {
     cursor: pointer;
     margin-top: 20px;
     display: block;
+    align-items: center;
+    text-align: center;
 }
-
 input[type="submit"]:hover {
     background-color: #a9621f;
 }
 
-/*###############################################################################################################################################################*/
+ /*###############################################################################################################################################################*/
 
-footer {
+ footer {
     background-color: rgb(24, 23, 23); /* Couleur de fond du footer */
     color: rgb(255, 255, 255); /* Couleur du texte dans le footer */
     text-align: center;
@@ -165,23 +139,16 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    
-}
-
-h3{
-    font-size: 17px;
 }
 
 .social-media a {
-    
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
 .social-media img {
     width: 25px; /* Ajustez la taille de l'icône de média social au besoin */
-    height: 25px;
-    
+    height: 25px; 
 }
 
 .social-media {
@@ -195,12 +162,15 @@ h3{
 .contact-info  {
     text-align: center;
 }
+
 .adresse {
     margin: 0 100px;
 }
 .adresse a{
-    
     color: rgb(255, 255, 255);
+}
+h3{
+    font-size: 17px;
 }
 
 /*###########
