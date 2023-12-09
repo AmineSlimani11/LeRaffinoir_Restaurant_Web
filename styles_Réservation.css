@@ -41,6 +41,7 @@ header{
 }
 .navbar li{
     list-style: none;
+    font-size: 17px;
 }
 .navbar a{
     color: #fff;
