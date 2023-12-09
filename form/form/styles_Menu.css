@@ -1,23 +1,12 @@
-   /* Réinitialisation des marges et des rembourrages par défaut */
-   body, h1, h2, p, ul, li {
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
 /*###############################################################################################################################################################*/
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #ffffff; /* Couleur de fond de la page */
-    background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
-    background-position: center center; /* Centre l'image horizontalement et verticalement */
-    background-attachment: fixed;
-}
-
-/*###############################################################################################################################################################*/
-
 header{
-    position: flex;
+    position: fixed;
     top: 0%;
     left: 0%;
     padding: 20px 10px;
@@ -35,21 +24,24 @@ header{
     font-size: 40px;
     text-decoration: none;
 }
+
 .navbar{
     display: flex;
     position: relative;
 }
+
 .navbar li{
     list-style: none;
     font-size: 17px;
 }
+
 .navbar a{
     color: #fff;
     text-decoration: none;
     margin-left: 35px;
-    font-weight: 900;
-    
+    font-weight: 900; 
 }
+
 header .navbar li a:hover{
     color: #a9621f;
     border-bottom: 2px solid #a9621f;
@@ -62,94 +54,74 @@ header .navbar li a:hover{
    text-transform:uppercase ;
    color: #fff;
 }
+
 .bouton-pour-inscripconnex:hover{
     background: #242323;
     transition: ease-out;
 }
 
-
 /*###############################################################################################################################################################*/
 
-.body {
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background-image: url('Images/page1.jpeg');
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
+    background-position: center center; /* Centre l'image horizontalement et verticalement */
+    background-attachment: fixed;
+}
+
+.tele-menu {
     display: flex;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    min-height: 30vh; /* Garantit que le conteneur prend toute la hauteur de la fenêtre */
 }
 
-aside {
-    flex-basis: 45%; /* Définit la largeur de la barre latérale */
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin: 10% auto;
-}
-
-aside h1{
-    color: #a9621f;
-    font-family: 'cursive';
-    letter-spacing: 2px;
-    line-height: 30px;
-}
-
-aside h1 span{
-    font-size: 30px ;
-}
-
-aside p {
-    color: #333;
-    text-align: justify;
-    margin-top: 20px;
-}
-
-/*###############################################################################################################################################################*/
-
-main {
-    max-width: 500px; /* Définissez la largeur maximale de la section */
-    margin: 0 auto; /* Centrez la section horizontalement */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    flex: 1;
-    position: flex;
-}
-
-form {
-    text-align: left;
-}
-
-label {
-    display: block;
+.tele-menu a {
+    display: inline-block;
     margin-top: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="time"],
-input[type="number"],
-textarea {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #333;
-    color: #fff;
     padding: 10px 20px;
-    border: none;
+    background-color: #a9621f;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: block;
+    transition: background-color 0.3s ease;
+    
 }
 
-input[type="submit"]:hover {
-    background-color: #a9621f;
+.tele-menu a:hover {
+    background-color: #482607;
 }
+
+h1 {
+    margin: 0;
+}
+
+.menu-category {
+    margin: 30px 0;
+    background-color: #f5f5f5; /* Couleur de fond pour la section du menu */
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis pour la section */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0; /* Augmentez la marge supérieure et inférieure pour un espacement accru */
+}
+
+img {
+    max-width: 100%;
+    max-height: 600px; /* Ajustez selon vos besoins */
+    border-radius: 5px;
+}
+
 
 /*###############################################################################################################################################################*/
 
