@@ -1,20 +1,24 @@
 <?php
-// Connexion à la base de données (à adapter selon votre configuration)
-require 'BD_Connection.php'; 
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Inclure le fichier de connexion à la base de données
+require 'BD_Connection.php';
 
 // Vérifie si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupère l'e-mail du formulaire
-    $email = $_POST["email"];
+    $email = $_POST["_email"];
 
     // Prépare la requête SQL
     $query = "SELECT * FROM Utilisateurs WHERE email = '$email'";
 
     // Exécute la requête
-    $result = $mysqli->query($query);
+    $result = $conn->query($query); // Utilisez $conn au lieu de $mysqli
 
     // Vérifie s'il y a des résultats
-    if ($result->num_rows > 0) {
+    if ($result && $result->num_rows > 0) {
         // L'utilisateur existe, redirige vers la page de connexion
         header("Location: page_Connectez.html");
         exit();
@@ -26,5 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Ferme la connexion à la base de données
-$mysqli->close();
+$conn->close();
 ?>
+

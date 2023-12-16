@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Récupère les valeurs des champs du formulaire
 $email = $_POST['email'];
 $password = $_POST['password'];
