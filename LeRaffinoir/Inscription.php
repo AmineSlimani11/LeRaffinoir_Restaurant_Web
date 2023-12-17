@@ -35,7 +35,7 @@ if (empty($nom) || empty($prenom) || empty($email) || empty($password) || empty(
         // Vérifie si la fonction password_hash a réussi
         if ($hashed_password !== false) {
             // Prépare la requête SQL pour insérer l'utilisateur dans la base de données
-            $requete = "INSERT INTO `Utilisateurs`(`Nom`, `Prenom`, `Email`, `Password`, `Telephone`, `Adresse`) VALUES ('$nom', '$prenom', '$email', '$hashed_password', '$telephone', '$adresse')";
+            $requete = "INSERT INTO `Utilisateurs`(`idUtilisateur`, `Nom`, `Prenom`, `Email`, `Password`, `Telephone`, `Adresse`) VALUES (NULL, '$nom', '$prenom', '$email', '$hashed_password', '$telephone', '$adresse')";
 
             // Exécute la requête
             $result = mysqli_query($conn, $requete);

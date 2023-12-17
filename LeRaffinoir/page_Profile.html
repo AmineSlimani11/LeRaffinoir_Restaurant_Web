@@ -1,16 +1,15 @@
+<?php
+    include('Profile.php');
+?>
 <!DOCTYPE html>
 <html>
 
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="styles_Connexion.css">
-        <title>Connectez-vouz</title>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+        <link rel="stylesheet" type="text/css" href="styles_Contact.css">
+        <title>Profile</title>
     </head>
-
     <body>
-
 
         <header>
             <a href="page_Accueil.html" class="logo"> Le RAFFINOIR</a>
@@ -21,29 +20,14 @@
                 <li><a href="page_Accueil.html#temoignage">Temoignage</a></li>
                 <li><a href="page_Menu.html">Menu</a></li>
                 <li><a href="page_Contact.html">Contact</a></li>
-                <a href="page_Connexion.html" class="bouton-pour-inscripconnex">S'inscrire/Connexion</a>
+                <a href="page_Profile.html" class="bouton-pour-inscripconnex">S'inscrire/Connexion</a>
             </ul>
         </header>
 
-        <main>
-            <div class="container">
-                    <h1>Connexion</h1>
-                    <p class="mt-2">Connectez-vous à votre espace personnel</p>
-                    <form action="Connectez.php" method="post" class="mt-4">
-                        <div class="input-box">
-                            <input type="email" class="form-control form-control-lg" name="_email" id="email" placeholder="Email" value="">
-                            <i class='bx bxs-user'></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="password" class="form-control form-control-lg" name="_password" id="password" placeholder="Password" value="">
-                            <i class='bx bxs-lock-alt'></i>
-                        </div>
-                        
-                        <button type="submit" class="btn">Connexion</button>
-                    </form>
+            <div class="content">
+                <h1>Bienvenue <?php echo "Mr " . $Nom; ?> sur votre profil</h1>
+                <!-- Autres contenus de la page de profil -->
             </div>
-        </main>
-        
 
         <footer>
             <div class="social-media">
