@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,18 +10,27 @@
     </head>
     <body>
 
-        <header>
-            <a href="page_Accueil.html" class="logo"> Le RAFFINOIR</a>
+    <header>
+            <a href="page_Accueil.php" class="logo"> Le RAFFINOIR</a>
             <div class="menuToggle"></div>
             <ul class="navbar">
-                <li><a href="page_Accueil.html">Accueil</a></li>
-                <li><a href="page_Accueil.html#apropos">À propos</a></li>
-                <li><a href="page_Accueil.html#temoignage">Temoignage</a></li>
-                <li><a href="page_Menu.html">Menu</a></li>
-                <li><a href="page_Contact.html">Contact</a></li>
-                <a href="page_Connexion.html" class="bouton-pour-inscripconnex">S'inscrire/Connexion</a>
+                <li><a href="page_Accueil.php">Accueil</a></li>
+                <li><a href="page_Accueil.php#apropos">À propos</a></li>
+                <li><a href="page_Accueil.php#temoignage">Temoignage</a></li>
+                <li><a href="page_Menu.php">Menu</a></li>
+                <?php if (isset($_SESSION['idUtilisateur'])): ?>
+                    <li><a href="page_Contact.php">Contact</a></li>
+                    <?php if ($_SESSION['isAdmin'] == 1): ?>
+                        <a href="page_Administrateur.php" class="bouton-pour-inscripconnex">Admin</a>
+                    <?php else: ?>
+                        <a href="page_Profile.php" class="bouton-pour-inscripconnex">Profile</a>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <a href="page_Connectez.php" >Contact</a>
+                    <a href="page_Connectez.php" class="bouton-pour-inscripconnex">Connexion</a>
+                <?php endif; ?>
             </ul>
-        </header>
+    </header>
 
         <main>
             <aside>

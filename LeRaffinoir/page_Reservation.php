@@ -1,26 +1,62 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="styles_Réservation.css">
+        <link rel="stylesheet" type="text/css" href="styles_Reservation.css">
         <title>Réservation</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Sélectionnez l'élément d'entrée pour l'heure de réservation
+                var heureInput = document.querySelector('.reservation-heure');
+
+                // Ajoutez un gestionnaire d'événements pour le changement de valeur
+                heureInput.addEventListener('input', function () {
+                    // Obtenez la valeur actuelle de l'heure
+                    var heure = heureInput.value;
+
+                    // Définissez les heures d'ouverture du restaurant
+                    var heureOuverture = "12:00";
+                    var heureFermeture = "23:00";
+
+                    // Vérifiez si l'heure de réservation est en dehors des heures d'ouverture
+                    if (heure < heureOuverture || heure > heureFermeture) {
+                        alert("Le restaurant est ouvert de 12h à 23h. Veuillez choisir une heure pendant ces heures d'ouverture.");
+                        // Réinitialisez la valeur de l'heure
+                        heureInput.value = "";
+                    }
+                });
+            });
+        </script>
+
     </head>
 
     <body>
 
-        <header>
-            <a href="page_Accueil.html" class="logo"> Le RAFFINOIR</a>
+    <header>
+            <a href="page_Accueil.php" class="logo"> Le RAFFINOIR</a>
             <div class="menuToggle"></div>
             <ul class="navbar">
-                <li><a href="page_Accueil.html">Accueil</a></li>
-                <li><a href="page_Accueil.html#apropos">À propos</a></li>
-                <li><a href="page_Accueil.html#temoignage">Temoignage</a></li>
-                <li><a href="page_Menu.html">Menu</a></li>
-                <li><a href="page_Contact.html">Contact</a></li>
-                <a href="page_Connexion.html" class="bouton-pour-inscripconnex">S'inscrire/Connexion</a>
+                <li><a href="page_Accueil.php">Accueil</a></li>
+                <li><a href="page_Accueil.php#apropos">À propos</a></li>
+                <li><a href="page_Accueil.php#temoignage">Temoignage</a></li>
+                <li><a href="page_Menu.php">Menu</a></li>
+                <?php if (isset($_SESSION['idUtilisateur'])): ?>
+                    <li><a href="page_Contact.php">Contact</a></li>
+                    <?php if ($_SESSION['isAdmin'] == 1): ?>
+                        <a href="page_Administrateur.php" class="bouton-pour-inscripconnex">Admin</a>
+                    <?php else: ?>
+                        <a href="page_Profile.php" class="bouton-pour-inscripconnex">Profile</a>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <a href="page_Connectez.php" >Contact</a>
+                    <a href="page_Connectez.php" class="bouton-pour-inscripconnex">Connexion</a>
+                <?php endif; ?>
             </ul>
-        </header>
+    </header>
 
         <div class="body">
 
@@ -51,7 +87,8 @@
                     <input type="date" id="date" name="date" required min="<?php echo date('Y-m-d'); ?>">
         
                     <label for="heure">Heure de réservation :</label>
-                    <input type="time" id="heure" name="heure" required min="12:00" max="23:59">
+                    <input type="time" id="heure" name="heure" class="reservation-heure" required min="12:00" max="23:00">
+
         
                     <label for="personnes">Nombre de personnes :</label>
                     <input type="number" placeholder="0" id="personnes" name="personnes" required>

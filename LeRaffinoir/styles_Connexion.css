@@ -78,8 +78,6 @@ header .navbar li a:hover{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-
-
 }
 
 main {
@@ -98,7 +96,6 @@ main {
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .container h1{
@@ -106,13 +103,11 @@ main {
     text-align: center;
 }
 
-
 .container  .input-box {
     position: relative;
     margin: 30px 0;
     width: 100%;
     height: 50px;
-    
 }
 
 .input-box i {
@@ -134,7 +129,6 @@ main {
     font-size: 16px;
     color: #fff;
     padding: 20px 45px 20px 20px;
-
 }
 
 .input-box input::placeholder {
@@ -153,6 +147,41 @@ main {
     font-size: 17px;
     color: rgb(0, 0, 0);
     font-weight: 600;
+}
+
+
+.new-account-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.new-account-section p.new-here-text {
+    font-size: 15px;
+    color: #fff;
+}
+
+.new-account-section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #a9621f;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 40px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.new-account-section a:hover {
+    background: #242323;
+}
+
+/* Nouveau style pour "Are you new here" */
+.new-account-section .new-here-text {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #fff;
 }
 
 label {
@@ -179,14 +208,11 @@ label {
     margin-top: 10px;
     text-align: center;
     font-size: 15px;
-
 }
 
- /*###############################################################################################################################################################*/
-
- footer {
-    background-color: rgb(24, 23, 23); /* Couleur de fond du footer */
-    color: rgb(255, 255, 255); /* Couleur du texte dans le footer */
+footer {
+    background-color: rgb(24, 23, 23);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px ;
     width: 100%;
@@ -223,10 +249,11 @@ h3{
 .contact-info  {
     text-align: center;
 }
+
 .adresse {
     margin: 0 100px;
 }
 
 .adresse a {
-    color :rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
 }

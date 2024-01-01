@@ -10,49 +10,56 @@ $email = $_POST['_email'] ?? '';
 $password = $_POST['_password'] ?? '';
 $password_verif = $_POST['_password_verif'] ?? '';
 $telephone = $_POST['_telephone'] ?? '';
-$adresse = $_POST['_adresse'] ?? '';
 
 // Vérifie si les champs obligatoires sont remplis
-if (empty($nom) || empty($prenom) || empty($email) || empty($password) || empty($password_verif) || empty($telephone) || empty($adresse)) {
+if (empty($nom) || empty($prenom) || empty($email) || empty($password) || empty($password_verif) || empty($telephone)) {
     echo "<h1>Tous les champs sont obligatoires.</h1>";
 } else {
-    // Vérifie si le mot de passe et sa confirmation sont identiques
-    if ($password === $password_verif) {
-        // Connexion à la base de données (à adapter selon votre configuration)
-        require 'BD_Connection.php';
+    // Connexion à la base de données (à adapter selon votre configuration)
+    require 'BD_Connection.php';
 
-        // Utilisation de la fonction mysqli_real_escape_string pour éviter les injections SQL
-        $nom = mysqli_real_escape_string($conn, $nom);
-        $prenom = mysqli_real_escape_string($conn, $prenom);
-        $email = mysqli_real_escape_string($conn, $email);
-        $password = mysqli_real_escape_string($conn, $password);
-        $telephone = mysqli_real_escape_string($conn, $telephone);
-        $adresse = mysqli_real_escape_string($conn, $adresse);
+    // Vérification si l'email existe déjà
+    $check_email_query = "SELECT * FROM Utilisateur WHERE Email = '$email'";
+    $check_email_result = mysqli_query($conn, $check_email_query);
 
-        // Hash du mot de passe
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    if (mysqli_num_rows($check_email_result) > 0) {
+        echo "<h1>Cet email est déjà associé à un compte existant.</h1>";
+    } else {
+        // Vérifie si le mot de passe et sa confirmation sont identiques
+        if ($password === $password_verif) {
+            // Utilisation de la fonction mysqli_real_escape_string pour éviter les injections SQL
+            $nom = mysqli_real_escape_string($conn, $nom);
+            $prenom = mysqli_real_escape_string($conn, $prenom);
+            $email = mysqli_real_escape_string($conn, $email);
+            $password = mysqli_real_escape_string($conn, $password);
+            $telephone = mysqli_real_escape_string($conn, $telephone);
 
-        // Vérifie si la fonction password_hash a réussi
-        if ($hashed_password !== false) {
-            // Prépare la requête SQL pour insérer l'utilisateur dans la base de données
-            $requete = "INSERT INTO `Utilisateurs`(`idUtilisateur`, `Nom`, `Prenom`, `Email`, `Password`, `Telephone`, `Adresse`) VALUES (NULL, '$nom', '$prenom', '$email', '$hashed_password', '$telephone', '$adresse')";
+            // Hash du mot de passe
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            // Exécute la requête
-            $result = mysqli_query($conn, $requete);
+            // Vérifie si la fonction password_hash a réussi
+            if ($hashed_password !== false) {
+                // Prépare la requête SQL pour insérer l'utilisateur dans la base de données
+                $requete = "INSERT INTO `Utilisateur`(`idUtilisateur`, `Nom`, `Prenom`, `Email`, `Password`, `Telephone`, `isAdmin`) VALUES (NULL, '$nom', '$prenom', '$email', '$hashed_password', '$telephone', 0)";
 
-            // Ferme la connexion à la base de données
-            $conn->close();
+                // Exécute la requête
+                $result = mysqli_query($conn, $requete);
 
-            if ($result) {
-                echo "<h1>Inscription réussie!</h1>";
+                // Ferme la connexion à la base de données
+                $conn->close();
+
+                if ($result) {
+                    echo "<h1>Inscription réussie!</h1>";
+                    header("Location: page_Connectez.php");
+                } else {
+                    echo "<h1>Erreur lors de l'inscription.</h1>";
+                }
             } else {
-                echo "<h1>Erreur lors de l'inscription.</h1>";
+                echo "<h1>Erreur lors du hachage du mot de passe.</h1>";
             }
         } else {
-            echo "<h1>Erreur lors du hachage du mot de passe.</h1>";
+            echo "<h1>Les mots de passe ne correspondent pas.</h1>";
         }
-    } else {
-        echo "<h1>Les mots de passe ne correspondent pas.</h1>";
     }
 }
 
